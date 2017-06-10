@@ -94,6 +94,14 @@
 
 
 
+        <!--添加工具类-->
+        <dependency>
+            <groupId>com.han</groupId>
+            <artifactId>han-utils</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <dependencyManagement>

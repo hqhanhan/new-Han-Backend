@@ -24,6 +24,9 @@
         <module>eureka-server2</module>
         <module>hello-service</module>
         <module>eureka-server3</module>
+        <module>han-utils</module>
+        <module>hello1-service</module>
+        <module>ribbon-consumer</module>
     </modules>
 
 
