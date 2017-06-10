@@ -1,3 +1,5 @@
+客户端配置类：EurekaClientConfig
+服务端配置类：EurekaServerConfig
 
 ###### 服务提供者 #####
 
@@ -37,6 +39,21 @@ eureka.client.registry-fetch-interval-seconds=30
 每个服务客户端被注册到一个Zone中，所以每个客户端对应一个Zone和一个Region
 在服务调用的时候，优先访问同一个Zone中的服务提供方
 TODO 源码详解
+###客户端配置类：EurekaClientConfig
+###服务端配置类：EurekaServerConfig
+
+#客户端，设置region 默认是
+eureka.client.region=default，没有特殊配置，就使用 eureka.client.serviceUrl.defaultZone =
+#客户端，设置zone，可配置多个，用“,”隔开
+eureka.client.availability-zones=
+
+以上为获取具体的Region和Zone的信息，然后是加载Eureka Server的具体信息
+
+
+
+
+
+
 
 3、服务下线
 #服务提供方，正常关闭的时候，向Eureka Server发送REST下线请求，将该服务状态置为DOWN,并把该下线事件传播出去

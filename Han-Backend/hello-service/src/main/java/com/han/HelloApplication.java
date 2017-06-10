@@ -1,9 +1,11 @@
 package com.han;
 
 
+import com.netflix.discovery.endpoint.EndpointUtils;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
 
 /**
  * Description：server-provider
@@ -15,6 +17,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class HelloApplication {
 
     public static void main(String[] args) {
+
 
         new SpringApplicationBuilder(HelloApplication.class).web(true).run(args);
     }
