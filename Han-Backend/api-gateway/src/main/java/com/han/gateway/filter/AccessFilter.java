@@ -77,10 +77,10 @@ public class AccessFilter extends ZuulFilter {
         response.setContentType("application/json");
         String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
         if (authorizationHeader == null || !authorizationHeader.startsWith("Bearer ")) {
-            ctx.set("","");
-            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-            ctx.setResponseBody("请先登录！");
+//            ctx.set("","");
+//            ctx.setSendZuulResponse(false);
+//            ctx.setResponseStatusCode(401);
+//            ctx.setResponseBody("请先登录！");
             return null;
         }
         String token = authorizationHeader.substring("Bearer".length()).trim();
