@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hello1-service</artifactId>
+    <artifactId>han-auth</artifactId>
 
     <dependencies>
 
@@ -27,5 +27,6 @@
         </dependency>
 
     </dependencies>
+
 
 </project>

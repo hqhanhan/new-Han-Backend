@@ -10,22 +10,24 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hello1-service</artifactId>
+    <artifactId>api-gateway</artifactId>
 
+    <!-- 网关-->
     <dependencies>
-
-        <!-- web-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
 
+        <!-- zuul 与 eureka配合使用，可以让路由的path不去映射具体的url，而是让它映射到具体的某个服务，
+                而具体的url交给Eureka的服务发现机制去自动维护，这类路由为面向服务的路由
+        -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
-
     </dependencies>
+
 
 </project>

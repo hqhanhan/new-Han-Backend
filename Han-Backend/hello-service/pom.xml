@@ -21,6 +21,20 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 客户端心跳方式，   Eureka 服务续约和剔除机制-->
+        <!--默认心跳实现方式可以有效检查客户端进程是否正常运行，但却无法保证客户端应用能够提供正常服务
+            大多数微服务有外部资源，如数据库，缓存，消息代理，如果无法与外部资源联通，但是依旧有心跳，
+            依旧会被消费者调用，不能达到预期的结果
+            TODO 这也就是引用一下包的原因
+            在spring-cloud中，交给一下来完成客户端的健康检测
+
+            eureka.client.healthcheck.enabled=true
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
         <!-- 发现注册-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

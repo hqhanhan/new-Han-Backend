@@ -27,6 +27,8 @@
         <module>han-utils</module>
         <module>hello1-service</module>
         <module>ribbon-consumer</module>
+        <module>api-gateway</module>
+        <module>han-auth</module>
     </modules>
 
 
